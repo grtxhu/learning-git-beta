@@ -1,0 +1,20 @@
+body {
+    background: #b0fcf1;
+}
+h1 {
+  text-align: center;
+  color: #20074d;
+}
+h2 {
+   text-align: center;
+   color:#330584;
+   font-size: 45px;
+   font-style: normal
+}
+p {
+    margin: 0 auto;
+    width: 250px;
+    font-size: 20px;
+    text-align: left;
+    
+}
