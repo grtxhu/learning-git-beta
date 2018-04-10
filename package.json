@@ -1,5 +1,5 @@
 {
-  "name": "learning-git-npm",
+  "name": "learning-git-beta",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -15,10 +15,10 @@
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:sass:dev": "node-sass --output-style expanded --source-map true -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
-    "watch": "parallelshell \"npm run watch:sass\" \"npm run watch:autoprefixer\" ",
-    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass --watch",
-    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css"
-
+    "watch:sassprefixer": "onchange sass/*.scss -- npm-run-all sassprefixer:*",
+    "sassprefixer:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "sassprefixer:autoprefixer": "autoprefixer-cli css/style.css",
+    "watch:browsersync": "browser-sync start --server --files 'css/*.css' '*.html'"
   },
   "keywords": [],
   "author": "",
